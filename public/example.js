@@ -21,8 +21,8 @@ document.getElementById("searchButton").onclick = function (event) {
         }
     }
 
-    localStorage.setItem("Iframe", __uv$config.prefix + __uv$config.encodeUrl(url););
-    window.location.href = "https://star-light-nine.vercel.app/public/go.html";
+      localStorage.setItem("Iframe", __uv$config.prefix + __uv$config.encodeUrl(url));
+  window.location.href = "https://star-light-nine.vercel.app/public/go.html"; 
 
     
 };
