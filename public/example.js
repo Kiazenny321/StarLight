@@ -1,4 +1,3 @@
-console.log(bad)
 document // makes it so you can press enter to submit as opposed to just being able to press a button
     .getElementById("urlInput")
     .addEventListener("keydown", function (event) {
@@ -13,7 +12,7 @@ document.getElementById("searchButton").onclick = function (event) {
 
     let url = document.getElementById("urlInput").value; // if no periods are detected in the input, search google instead
     let searchUrl = "https://www.google.com/search?q=";
-    let bad = document.getElementById("urlInput").value;
+
     if (!url.includes(".")) {
         url = searchUrl + encodeURIComponent(url);
     } else {
@@ -21,11 +20,9 @@ document.getElementById("searchButton").onclick = function (event) {
             url = "https://" + url;
         }
     }
-    
-          localStorage.setItem("Iframe", __uv$config.prefix + __uv$config.encodeUrl(url));
+
+      localStorage.setItem("Iframe", __uv$config.prefix + __uv$config.encodeUrl(url));
   window.location.href = "https://star-light-nine.vercel.app/go.html"; 
-    
-    
 
     
 };
