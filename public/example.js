@@ -21,14 +21,10 @@ document.getElementById("searchButton").onclick = function (event) {
             url = "https://" + url;
         }
     }
-    if(bad == porn) {
-  window.location.href = "https://star-light-nine.vercel.app/BadSite"; 
-    } else {
+    
           localStorage.setItem("Iframe", __uv$config.prefix + __uv$config.encodeUrl(url));
   window.location.href = "https://star-light-nine.vercel.app/go.html"; 
-    }
-        
-
+    
     
 
     
