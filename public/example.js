@@ -4,13 +4,11 @@ document // makes it so you can press enter to submit as opposed to just being a
         if (event.key === "Enter") {
             event.preventDefault();
             document.getElementById("searchButton").click();
-            
         }
     });
 
 document.getElementById("searchButton").onclick = function (event) {
     event.preventDefault();
-    
 
     let url = document.getElementById("urlInput").value; // if no periods are detected in the input, search google instead
     let searchUrl = "https://www.google.com/search?q=";
@@ -22,8 +20,7 @@ document.getElementById("searchButton").onclick = function (event) {
             url = "https://" + url;
         }
     }
+
     iframeWindow.src = __uv$config.prefix + __uv$config.encodeUrl(url);
-localStorage.setItem("Iframe", __uv$config.prefix + __uv$config.encodeUrl(url););
-window.location.href = "https://star-light-nine.vercel.app/public/go";
     
 };
