@@ -1,16 +1,15 @@
-
 <iframe id="iframeWindow" class="iframeWindow"></iframe>
 <script>
-
  var encUrl = localStorage.getItem("Iframe");
-    var iframe = win.document.createElement("iframe");
-    iframe.style.position = "absolute";
-    iframe.style.left = "0";
-    iframe.style.top = "0";
-    iframe.style.width = "100vw";
-    iframe.style.height = "100vh";
-    iframe.style.border = "none";
-    iframe.style.margin = "0";
-    iframe.style.padding = "0";
-    iframe.src = encUrl;
-</script>
+  var iframe = document.getElementById("iframeWindow"); 
+
+  iframe.style.position = "absolute";
+  iframe.style.left = "0";
+  iframe.style.top = "0";
+  iframe.style.width = "100vw";
+  iframe.style.height = "100vh";
+  iframe.style.border = "none";
+  iframe.style.margin = "0";
+  iframe.style.padding = "0";
+  iframe.src = encUrl;        
+ </script>
