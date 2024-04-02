@@ -1,3 +1,4 @@
+console.log(bad)
 document // makes it so you can press enter to submit as opposed to just being able to press a button
     .getElementById("urlInput")
     .addEventListener("keydown", function (event) {
@@ -22,10 +23,13 @@ document.getElementById("searchButton").onclick = function (event) {
     }
     if(bad == porn) {
   window.location.href = "https://star-light-nine.vercel.app/BadSite"; 
-    }
-
-      localStorage.setItem("Iframe", __uv$config.prefix + __uv$config.encodeUrl(url));
+    } else {
+          localStorage.setItem("Iframe", __uv$config.prefix + __uv$config.encodeUrl(url));
   window.location.href = "https://star-light-nine.vercel.app/go.html"; 
+    }
+        
+
+    
 
     
 };
