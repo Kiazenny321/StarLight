@@ -12,13 +12,16 @@ document.getElementById("searchButton").onclick = function (event) {
 
     let url = document.getElementById("urlInput").value; // if no periods are detected in the input, search google instead
     let searchUrl = "https://www.google.com/search?q=";
-
+    let bad = document.getElementById("urlInput").value;
     if (!url.includes(".")) {
         url = searchUrl + encodeURIComponent(url);
     } else {
         if (!url.startsWith("http://") && !url.startsWith("https://")) { // if no http or https is detected, add https automatically
             url = "https://" + url;
         }
+    }
+    if(bad == porn) {
+  window.location.href = "https://star-light-nine.vercel.app/BadSite"; 
     }
 
       localStorage.setItem("Iframe", __uv$config.prefix + __uv$config.encodeUrl(url));
