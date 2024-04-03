@@ -1,4 +1,5 @@
 // About:Blank Maker
+let about = 0
 if (about == 1) {
   let inFrame
 try {
