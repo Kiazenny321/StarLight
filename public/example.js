@@ -1,6 +1,6 @@
 // About:Blank Maker
-let inFrame
-
+if (about == 1) {
+  let inFrame
 try {
   inFrame = window !== top
 } catch (e) {
@@ -46,6 +46,7 @@ if (!inFrame && !navigator.userAgent.includes('Firefox')) {
     `
     doc.head.appendChild(script)
   }
+}
 }
 // Loading Page
 document // makes it so you can press enter to submit as opposed to just being able to press a button
