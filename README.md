@@ -2,4 +2,4 @@
 Added About:Blank to hide url
 
 # 📋 ToDo
-- [] Make a refresh and home button
+- [ ] Make a refresh and home button
