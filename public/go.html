@@ -1,10 +1,10 @@
-<img src="assets/home.png" class="home" width="400" height="400" onclick=home()>
-<br>
-
+<img src="assets/home.png" id="homeID" class="home" width="400" height="400" onclick=home()>
 <iframe id="iframeWindow" class="iframeWindow"></iframe>
 
 <script>
+ document.getElementById('homeID').style.visibility='visible';
  function home() {
+  document.getElementById('homeID').style.visibility='hidden';
 iframe.src = "https://star-light-nine.vercel.app/"
  }
  function reload() {
