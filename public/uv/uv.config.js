@@ -1,7 +1,7 @@
 /*global Ultraviolet*/
 self.__uv$config = {
-    prefix: '/service/',
-    bare: '/bare/',
+    prefix: '/uv/service/',
+    bare: 'https://focus-bare.vercel.app',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/uv.handler.js',
