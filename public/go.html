@@ -5,23 +5,13 @@
     <p>This may take 2-3 minutes</p>
   </div>
 <script>
-  var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-
-    // Check if loading is complete
-    function hideIframeContent() {
-    document.getElementById('iframeWindow').style.visibility = 'hidden'; 
-}
-
-var iframe = document.getElementById('iframeWindow');
-iframe.addEventListener('load', hideIframeContent);
-  
-
  function home() {
 iframe.src = "https://star-light-nine.vercel.app/"
  }
  function reload() {
 iframe.src = iframe.src
  }
+const style = iframe.style
 var iframe = document.getElementById("iframeWindow"); 
  var encUrl = localStorage.getItem("Iframe");
  iframe.src = encUrl
@@ -29,6 +19,7 @@ var iframe = document.getElementById("iframeWindow");
     style.top = style.bottom = style.left = style.right = 0
     style.border = style.outline = 'none'
     style.width = style.height = '100%'
+
 
  </script>
 
@@ -41,14 +32,12 @@ font-size: 60px;
 text-align: center;
   color:white;
    z-index: 1;  
-   visibility: visible;
  }
  h1 {
 font-size: 80px;
 text-align: center;
   color: white;
    z-index: 1;  
-   visibility: visible;
  }
 
 
