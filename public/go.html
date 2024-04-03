@@ -5,6 +5,15 @@
     <p>This may take 2-3 minutes</p>
   </div>
 <script>
+  var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+    // Check if loading is complete
+    if (  iframeDoc.readyState  == 'complete' ) {
+        
+        iframe.contentWindow.onload = function(){
+            document.getElementById('iframeWindow').style.visibility='hidden';
+        };
+
  function home() {
 iframe.src = "https://star-light-nine.vercel.app/"
  }
@@ -30,12 +39,14 @@ font-size: 60px;
 text-align: center;
   color:white;
    z-index: 1;  
+   visibility: visible;
  }
  h1 {
 font-size: 80px;
 text-align: center;
   color: white;
    z-index: 1;  
+   visibility: visible;
  }
 
 
