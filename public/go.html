@@ -8,10 +8,8 @@
   var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
 
     // Check if loading is complete
-    if (  iframeDoc.readyState  == 'complete' ) {
-        
-        iframe.contentWindow.onload = function(){
-            document.getElementById('iframeWindow').style.visibility='hidden';
+    if (document.readyState === 'complete') {
+    document.getElementById('iframeWindow').style.visibility='hidden';
         };
 
  function home() {
