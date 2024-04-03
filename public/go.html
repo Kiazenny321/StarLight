@@ -7,17 +7,8 @@
 <script>
   var iframe = document.getElementById("iframeWindow"); 
   var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-// This is how it gets unblocked
-   // Text Hide
- if (  iframeDoc.readyState  == 'complete' ) {
-      
-        iframe.contentWindow.onload = function(){
-            
-        };
-        HideMSG();
-        return;
-    } 
-
+ 
+ 
   
  document.getElementById('homeID').style.visibility='hidden';
  function home() {
@@ -37,11 +28,6 @@ iframe.src = iframe.src
   iframe.style.margin = "0";
   iframe.style.padding = "0";
   iframe.src = encUrl;
-
-  function HideMSG() {
-document.getElementById('Text').style.visibility='hidden';
-
-  }
  </script>
 
 
