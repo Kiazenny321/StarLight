@@ -1,3 +1,7 @@
+body {
+background-color: black;
+ }
+
 .iframeWindow {
     position: absolute;
     width: 100vw;
