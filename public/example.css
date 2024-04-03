@@ -50,8 +50,8 @@ background-color: black;
 }
 
 h1 {
-top: 0;
-left: 0;
+top: 0.25rem;
+  left: 0.25rem;
 position: absolute; 
  font-size: 10px;
  text-color: white;
