@@ -1,13 +1,19 @@
 <img src="assets/home.png" id="homeID" class="home" width="200" height="200" onclick=home()>
 <iframe id="iframeWindow" class="iframeWindow"></iframe>
-  <div id="loading"> <h1>StarLight</h1>
+  <div id="loading">
+    <h1>StarLight</h1>
     <p>This may take 2-3 minutes</p>
   </div>
 <script>
- // hides iframe on load
-  iframe.onload = function() {
-      document.getElementById('loading').style.display = 'none'; 
-    }
+ // hides message on load
+   var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+    // Check if loading is complete
+    if (  iframeDoc.readyState  == 'complete' ) {
+        
+        iframe.contentWindow.onload = function(){
+            document.getElementById('homeID').style.visibility='hidden';
+        };
 
  
  document.getElementById('homeID').style.visibility='hidden';
