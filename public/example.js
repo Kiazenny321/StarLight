@@ -1,5 +1,5 @@
 // About:Blank Maker
-let about = 0
+let about = 1
 if (about == 1) {
   let inFrame
 try {
@@ -74,7 +74,5 @@ document.getElementById("searchButton").onclick = function (event) {
     }
 
       localStorage.setItem("Iframe", __uv$config.prefix + __uv$config.encodeUrl(url));
-  window.location.href = "https://star-light-nine.vercel.app/go.html"; 
-
-    
+      window.location.href = "https://star-light-nine.vercel.app/go.html"; 
 };
