@@ -1,8 +1,10 @@
 <img src="assets/home.png" id="homeID" class="home" width="200" height="200" onclick=home()>
 <iframe id="iframeWindow" class="iframeWindow"></iframe>
-<h1>StarLight</h1>
+<h1 id="loading">StarLight</h1>
+<p id="loading">This may take 2-3 minutes</p>
 <p>This may take 2-3 minutes</p>
 <script>
+ document.getElementById('loading').style.visibility='visible';
  document.getElementById('homeID').style.visibility='hidden';
  function home() {
   document.getElementById('homeID').style.visibility='hidden';
@@ -22,8 +24,10 @@ iframe.src = iframe.src
   iframe.style.border = "none";
   iframe.style.margin = "0";
   iframe.style.padding = "0";
-  iframe.src = encUrl;        
+  iframe.src = encUrl;
+ document.getElementById('loading').style.visibility='hidden';
  </script>
+
 <style>
  p {
 font-size: 60px;
