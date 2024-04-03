@@ -1,23 +1,17 @@
-<img src="assets/home.png" id="homeID" class="home" width="200" height="200" onclick=home()>
+
 <iframe id="iframeWindow" class="iframeWindow"></iframe>
   <div id="Text">
     <h1>StarLight</h1>
     <p>This may take 2-3 minutes</p>
   </div>
 <script>
-  var iframe = document.getElementById("iframeWindow"); 
-  var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
- 
- 
-  
- document.getElementById('homeID').style.visibility='hidden';
  function home() {
-  document.getElementById('homeID').style.visibility='hidden';
 iframe.src = "https://star-light-nine.vercel.app/"
  }
  function reload() {
 iframe.src = iframe.src
  }
+var iframe = document.getElementById("iframeWindow"); 
  var encUrl = localStorage.getItem("Iframe");
   iframe.style.position = "absolute";
   iframe.style.left = "0";
