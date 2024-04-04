@@ -16,11 +16,11 @@
         <script src="/uv/uv.config.js"></script>
 
         <script>
-          let cloak = getItem("tabName");
-          if (cloak === null) {
+          let cloak = localStorage.getItem("tabName");
+          if (cloak == null) {
             document.title = "Google Drive";
           } else {
-          document.title = getItem("tabName");
+          document.title = localStorage.getItem("tabName");
           }
   
       
