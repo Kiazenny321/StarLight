@@ -5,18 +5,6 @@
     <p>This may take 2-3 minutes</p>
 </div>
 <script>
-    var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-
-    if (  iframeDoc.readyState  == 'complete' ) {
-        iframe.contentWindow.onload = function(){
-        log(Loaded Iframe)
-        };
-        Loaded();
-        return;
-    function Loaded() {
-        LoadingDiv.style.visibility = 'hidden';
-        document.body.style.backgroundColor = "white";
-    }
  function home() {
 iframe.src = "https://star-light-nine.vercel.app/"
  }
