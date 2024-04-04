@@ -3,11 +3,11 @@
 <script>
 function tab() {
   let newTabName = prompt("Enter a New Tab Name!");
-  if (newTabName == null) { 
+  if (newTabName == "") { 
+    alert("No new Tab Name was set!");
+  } else {
     document.title = newTabName;
     localStorage.setItem("tabName", newTabName);
-  } else {
-    alert("No new Tab Name was set!");
   }
 }
 
