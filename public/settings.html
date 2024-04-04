@@ -13,8 +13,10 @@ function tab() {
 
 // Load tab name on page load
 let tabName = localStorage.getItem("tabName");
-if (tabName) { 
-  document.title = tabName;
+if (tabName == "") { 
+  document.title = "Google Drive";
+} else {
+document.title = getItem("tabName");
 }
 
 </script>
