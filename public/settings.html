@@ -1,28 +1,40 @@
 <button class="Tab" onclick="tab()">Click Me</button>
+
 <script>
-    let tab = getItem(TabCloak);
-    if (tab = ""){
-        document.title = "Google Drive";
-    } else {
-        document.title = tab
-    }
-    function tab() {
-        let TabCloak = prompt("Enter a New Tab Name!");
-        if (TabCloak == "") {
-            alert("No new Tab Name was set!");
-        } else {
-            document.title = TabCloak;
-            setItem("TabCloak", TabCloak);
 
-        }
+function setItem(key, value) {
+  localStorage.setItem(key, value);
+}
 
-    }
+function getItem(key) {
+  return localStorage.getItem(key);
+}
+
+
+function tab() {
+  let TabCloak = prompt("Enter a New Tab Name!");
+  if (TabCloak === "") { 
+    alert("No new Tab Name was set!");
+  } else {
+    document.title = TabCloak;
+    setItem("TabCloak", TabCloak);
+  }
+}
+
+
+let tab = getItem("TabCloak");
+if (tab !== "") { 
+  document.title = tab;
+}
+
 </script>
+
 <style>
-    body {
- background-color: black;
-    }
-    .Tab {
-        border-radius: 25px;   
-    }
+body {
+  background-color: black;
+}
+.Tab {
+  border-radius: 25px; 
+  
+}
 </style>
