@@ -1,9 +1,9 @@
 <script>
-  let TabC = getItem("tabName");
+  let TabC = localStorage.getItem("tabName");
   if (TabC == null) {
     document.title = "Google Drive";
   } else {
-    document.title = getItem("tabName");
+    document.title = localStorage.getItem("tabName");
   }
 
 </script>
