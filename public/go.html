@@ -5,6 +5,12 @@
     <p>This may take 2-3 minutes</p>
 </div>
 <script>
+    iframe.onload = function() {
+  load(); 
+};
+  function load() {
+document.querySelector(".Loading").style.display = "none";
+ }
  function home() {
 iframe.src = "https://star-light-nine.vercel.app/"
  }
