@@ -1,8 +1,13 @@
 
-<iframe id="iframeWindow" class="iframeWindow"></iframe>
+<iframe onload="Loaded()" id="iframeWindow" class="iframeWindow"></iframe>
+<div class="Loading">
     <h1>StarLight</h1>
     <p>This may take 2-3 minutes</p>
+</div>
 <script>
+    function Loaded() {
+        LoadingDiv.style.visibility = 'hidden';
+    }
  function home() {
 iframe.src = "https://star-light-nine.vercel.app/"
  }
