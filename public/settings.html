@@ -1,0 +1,14 @@
+<title>Settings</title>
+<button onclick"tab()" type="tab">Cloak Tab</button>
+
+<script>
+    function tab() {
+        let TabCloak = window.prompt("Enter a Tab Name","");
+        if (TabCloak == "") {
+            alert("No new Tab Name was set!")
+        } else {
+            document.title = TabCloak
+        }
+
+    }
+</script>
