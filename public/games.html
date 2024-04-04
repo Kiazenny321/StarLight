@@ -1,1 +1,8 @@
-
+<script>
+let cloak = localStorage.getItem("tabName");
+          if (cloak == null) {
+            document.title = "Google Drive";
+          } else {
+          document.title = localStorage.getItem("tabName");
+          }
+  </script>
