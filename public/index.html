@@ -1,4 +1,4 @@
-<title>Home</title>
+
 <nav class="nav"> 
     <ul>
       <li><a href="https://star-light-nine.vercel.app/">Home</a></li>
@@ -16,7 +16,13 @@
         <script src="/uv/uv.config.js"></script>
 
         <script>
-            
+          let cloak = getItem(TabCloak)
+          if (cloak == "") {
+            document.title = "Google Drive";
+          } else {
+          document.title = cloak;
+          }
+  
       
         if ("serviceWorker" in navigator) {
             window.addEventListener("load", () => {

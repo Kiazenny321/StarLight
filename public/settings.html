@@ -1,13 +1,29 @@
-<title>Settings</title>
-<button onclick="tab()">Tab Cloaker</button>
+
+<button class="Tab" onclick="tab()">Tab Cloaker</button>
 <script>
+    let tab = getItem(TabCloak)
+    if (tab = ""){
+        document.title = "Google Drive"
+    } else {
+        document.title = tab
+    }
     function tab() {
         let TabCloak = prompt("Enter a New Tab Name!")
         if (TabCloak == "") {
             alert("No new Tab Name was set!")
         } else {
             document.title = TabCloak
+            setItem("TabCloak", TabCloak)
+
         }
 
     }
 </script>
+<style>
+    body {
+ background-color: black;
+    }
+    .Tab {
+        border-radius: 25px;   
+    }
+</style>
