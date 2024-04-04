@@ -32,9 +32,12 @@
     transition: background-color 0.3s ease;
   }
 p {
-text-align: center;
  font-size:80px;
  color: white;
+position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
 }
 body {
 background-color: black;
