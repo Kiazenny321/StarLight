@@ -3,7 +3,7 @@
 <script>
 function tab() {
   let newTabName = prompt("Enter a New Tab Name!");
-  if (newTabName !== "") { 
+  if (newTabName == null) { 
     document.title = newTabName;
     localStorage.setItem("tabName", newTabName);
   } else {
@@ -13,7 +13,7 @@ function tab() {
 
 // Load tab name on page load
 let tabName = localStorage.getItem("tabName");
-if (tabName == "") { 
+if (tabName == null) { 
   document.title = "Google Drive";
 } else {
 document.title = getItem("tabName");
