@@ -7,5 +7,5 @@ Making Background white on iframe load
 - [ ] Make a refresh and home button
 - [ ] Make a UI
 - [ ] Make Loading Website Page Better
-- [ ] Make About:Blank Work
+- [x] Make About:Blank Work
 
