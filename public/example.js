@@ -46,13 +46,11 @@ document.getElementById("searchButton").onclick = function (event) {
     }
 
     if (UVEnabled) {
-        localStorage.setItem("Iframe",_uv$config.prefix + _uv$config.encodeUrl(url))
-        window.location.href = "https://star-light-nine.vercel.app/go.html";
-
+        localStorage.setItem("Iframe",__uv$config.prefix + __uv$config.encodeUrl(url);)
     } else {
-            localStorage.setItem("Iframe",_dynamic$config.prefix +
-            "route?url=" + encodeURIComponent(url))
-            window.location.href = "https://star-light-nine.vercel.app/go.html";
+        localStorage.setItem("Iframe",   __dynamic$config.prefix +
+            "route?url=" +
+            encodeURIComponent(url);)
     }
 };
 
@@ -64,6 +62,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 let UVEnabled = JSON.parse(localStorage.getItem("UVEnabled")) || isUVEnabledByDefault;
-
-
-
