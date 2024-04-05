@@ -21,7 +21,15 @@
 document.querySelector(".Loading").style.display = "none";
  }
  function home() {
-  
+  const currentURL = window.location.href;
+const slashIndex = currentURL.indexOf('/');
+
+
+if (slashIndex !== -1) {
+  const baseURL = currentURL.substring(0, slashIndex + 1);
+
+  window.history.replaceState({}, '', baseURL); 
+}
 }
 
  function reload() {
