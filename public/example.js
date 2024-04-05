@@ -46,15 +46,10 @@ document.getElementById("searchButton").onclick = function (event) {
     }
 
     if (UVEnabled) {
-        iframeWindow.src = __uv$config.prefix + __uv$config.encodeUrl(url);
         localStorage.setItem("Iframe",_uv$config.prefix + _uv$config.encodeUrl(url))
         window.location.href = "https://star-light-nine.vercel.app/go.html";
 
     } else {
-        iframeWindow.src =
-            __dynamic$config.prefix +
-            "route?url=" +
-            encodeURIComponent(url);
             localStorage.setItem("Iframe",_dynamic$config.prefix +
             "route?url=" + encodeURIComponent(url))
             window.location.href = "https://star-light-nine.vercel.app/go.html";
