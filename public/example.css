@@ -32,7 +32,7 @@
     transition: background-color 0.3s ease;
   }
 p {
- font-size:80px;
+ font-size: 80px;
  color: white;
 position: absolute;
   top: 8px;
@@ -88,5 +88,5 @@ background-color: black;
 h1 {
  text-align: center;
  font-size: 80px;
- text-color: white;
+ color: white;
 }
