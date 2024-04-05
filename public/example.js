@@ -1,5 +1,27 @@
+let isUVEnabledByDefault = true;
 
-// Loading Page
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("toggleUVEnabled");
+
+    toggleButton.addEventListener("click", function () {
+        let UVEnabled = JSON.parse(localStorage.getItem("UVEnabled")) || isUVEnabledByDefault;
+
+        UVEnabled = !UVEnabled;
+
+        toggleButton.textContent = UVEnabled
+            ? "Dynamic: OFF, UV: ON"
+            : "Dynamic: ON, UV: OFF";
+
+        localStorage.setItem("UVEnabled", JSON.stringify(UVEnabled));
+    });
+
+    let initialUVEnabled =
+        JSON.parse(localStorage.getItem("UVEnabled")) || isUVEnabledByDefault;
+    toggleButton.textContent = initialUVEnabled
+        ? "Dynamic: OFF, UV: ON"
+        : "Dynamic: ON, UV: OFF";
+});
+
 document // makes it so you can press enter to submit as opposed to just being able to press a button
     .getElementById("urlInput")
     .addEventListener("keydown", function (event) {
@@ -12,7 +34,7 @@ document // makes it so you can press enter to submit as opposed to just being a
 document.getElementById("searchButton").onclick = function (event) {
     event.preventDefault();
 
-    let url = document.getElementById("urlInput").value; // if no periods are detected in the input, search google instead
+    let url = document.getElementById("urlInput").value; // If no periods are detected in the input, search google instead
     let searchUrl = "https://www.google.com/search?q=";
 
     if (!url.includes(".")) {
@@ -22,7 +44,31 @@ document.getElementById("searchButton").onclick = function (event) {
             url = "https://" + url;
         }
     }
-    setTimeout(() => {  console.log('World!'); }, 1000);
-      localStorage.setItem("Iframe", __uv$config.prefix + __uv$config.encodeUrl(url));
-      window.location.href = "https://star-light-nine.vercel.app/go.html"; 
+
+    if (UVEnabled) {
+        iframeWindow.src = __uv$config.prefix + __uv$config.encodeUrl(url);
+        localStorage.setItem("Iframe",_uv$config.prefix + _uv$config.encodeUrl(url))
+        window.location.href = "https://star-light-nine.vercel.app/go.html";
+
+    } else {
+        iframeWindow.src =
+            __dynamic$config.prefix +
+            "route?url=" +
+            encodeURIComponent(url);
+            localStorage.setItem("Iframe",_dynamic$config.prefix +
+            "route?url=" + encodeURIComponent(url))
+            window.location.href = "https://star-light-nine.vercel.app/go.html";
+    }
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+    var savedEngine = localStorage.getItem("preferredSearchEngine");
+    if (savedEngine) {
+        document.getElementById("searchEngineSelect").value = savedEngine;
+    }
+});
+
+let UVEnabled = JSON.parse(localStorage.getItem("UVEnabled")) || isUVEnabledByDefault;
+
+
+
