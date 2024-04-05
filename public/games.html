@@ -7,12 +7,28 @@ let cloak = localStorage.getItem("tabName");
           }
   </script>
 
-<img src="assets/Coolmathgames.JPG" class="games" width="80" height="60">
+<img src="assets/Coolmathgames.JPG" class="games" width="100" height="100" onclick="coolmath()">
 
+<script>
+  function coolmath() {
+    localStorage.setItem("Iframe","/uv/service/hvtrs8%2F-Cmonmctjgcmgs%2Ccmm")
+    let currentURL = window.location.href;
+    let lastSlashIndex = currentURL.lastIndexOf('/');
+let newURL = (lastSlashIndex !== -1) ?
+             currentURL.substring(0, lastSlashIndex + 1) + "go.html" :
+             currentURL + "go.html"; 
 
+console.log("Modified URL:", newURL);
+window.location.href = newURL; 
+}
+</script>
 <style>
 .games {
 margin: 4px;
 float: left;
+border-radius: 25px;
+}
+body {
+  background-color: black;
 }
 </style>

@@ -21,10 +21,17 @@
 document.querySelector(".Loading").style.display = "none";
  }
  function home() {
-iframe.src = "https://star-light-nine.vercel.app/"
- }
+  
+}
+
  function reload() {
 iframe.src = iframe.src
+ }
+ function back() {
+  iframe.contentWindow.history.back()
+ }
+ function foward() {
+  iframe.contentWindow.history.foward()
  }
  var encUrl = localStorage.getItem("Iframe");
   iframe.style.position = "absolute";

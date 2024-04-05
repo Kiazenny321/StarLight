@@ -24,5 +24,5 @@ document.getElementById("searchButton").onclick = function (event) {
     }
     setTimeout(() => {  console.log('World!'); }, 1000);
       localStorage.setItem("Iframe", __uv$config.prefix + __uv$config.encodeUrl(url));
-      window.location.href = "https://star-light-nine.vercel.app/go.html"; 
+      window.location.href = window.location.href + "go.html"; 
 };
