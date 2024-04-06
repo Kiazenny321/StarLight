@@ -6,6 +6,6 @@ Making Background white on iframe load
 - [x] Fix Issue where StarLight doesnt work on devices
 - [ ] Make a refresh and home button
 - [ ] Make a UI
-- [ ] Make Loading Website Page Better
+- [x] Make Loading Website Page Better
 - [x] Make About:Blank Work
 
