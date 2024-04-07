@@ -9,3 +9,6 @@ Making Background white on iframe load
 - [x] Make Loading Website Page Better
 - [x] Make About:Blank Work
 
+# Self Hosting
+Fork This Repository, then select it on your hoster 
+If you are using console do node server.js
